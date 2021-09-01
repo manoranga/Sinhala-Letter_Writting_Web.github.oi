@@ -13,7 +13,7 @@
      img.onload = function() {
          ctx.drawImage(img, 0, 0);
      };
-     img.src = 'https://www.enenapiyasa.lk/akuru/letter/img/desktop/tha.png';
+     img.src = './assets/images/tha.png';
 
     let drawer = {
         // A list of shapes on the canvas
