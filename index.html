@@ -24,106 +24,133 @@
 </head>
 <body>
 
-    <!-- Navigation bar -->
-    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" style="display: none;">
-        <div class="container-fluid">
-            <!-- Shapes -->
-            <ul id="shape-list" class="nav navbar-nav">
-                <li data-shape="rectangle">
-                    <a>
-                        <i class="far fa-square"></i>
-                    </a>
-                </li>
-                <li data-shape="oval">
-                    <a>
-                        <i class="far fa-compass"></i>
-                    </a>
-                </li>
-                <li data-shape="circle">
-                    <a>
-                        <i class="far fa-circle"></i>
-                    </a>
-                </li>
-                <li data-shape="line">
-                    <a>
-                        <span class="glyphicon glyphicon-minus"></span>
-                    </a>
-                </li>
-                <li class="active" data-shape="lineList">
-                    <a>
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </li>
-                <li data-shape="text">
-                    <a>
-                        <span class="glyphicon glyphicon-text-width"></span>
-                    </a>
-                </li>
-                <li data-shape="move">
-                    <a>
-                        <span class="glyphicon glyphicon-move"></span>
-                    </a>
-                </li>
-            </ul>
-            <!-- Settings -->
-            <ul id="settings-list" class="nav navbar-nav">
-                <li>
-                    <a>
-                        <input id="color-selector" type="color">
-                    </a>
-                </li>
-                <li>
-                    <a data-toggle="modal" data-target="#size-modal">
-                        <i class="fas fa-ruler-combined"></i>
-                    </a>
-                </li>
-                <li>
-                    <a id="fill-toggle" data-filled="no">
-                        <i class="far fa-star"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- IO -->
-            <ul id="io-list" class="nav navbar-nav">
-                <li>
-                    <a id="img-save">
-                        <span class="glyphicon glyphicon-download"></span>
-                    </a>
-                </li>
-                <li>
-                    <a id="img-load">
-                        <span class="glyphicon glyphicon-upload"></span>
-                    </a>
-                </li>
-                <li>
-                    <a id="img-clear">
-                        <i class="fas fa-file"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- Undo + Redo -->
-            <ul id="time-travel" class="nav navbar-nav">
-                <li>
-                    <a id="btn-undo">
-                        <i class="fas fa-undo"></i>
-                    </a>
-                </li>
-                <li>
-                    <a id="btn-redo">
-                        <i class="fas fa-redo"></i>
-                    </a>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="toppane">
+            <nav id="main-nav" class="navbar">
+                <div class="container-fluid">
+                    <!-- Shapes -->
+                    <ul id="shape-list" class="nav navbar-nav" style="display: none;">
+                        <li data-shape="rectangle">
+                            <a>
+                                <i class="far fa-square"></i>
+                            </a>
+                        </li>
+                        <li data-shape="oval">
+                            <a>
+                                <i class="far fa-compass"></i>
+                            </a>
+                        </li>
+                        <li data-shape="circle">
+                            <a>
+                                <i class="far fa-circle"></i>
+                            </a>
+                        </li>
+                        <li data-shape="line">
+                            <a>
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </a>
+                        </li>
+                        <li class="active" data-shape="lineList">
+                            <a>
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                        </li>
+                        <li data-shape="text">
+                            <a>
+                                <span class="glyphicon glyphicon-text-width"></span>
+                            </a>
+                        </li>
+                        <li data-shape="move">
+                            <a>
+                                <span class="glyphicon glyphicon-move"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Settings -->
+                    <ul id="settings-list" class="nav navbar-nav" style="display: none;">
+                        <li>
+                            <a>
+                                <input id="color-selector" type="color">
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#size-modal">
+                                <i class="fas fa-ruler-combined"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="fill-toggle" data-filled="no">
+                                <i class="far fa-star"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- IO -->
+                    <ul id="io-list" class="nav navbar-nav">
+                        <li style="display: none;">
+                            <a id="img-save">
+                                <span class="glyphicon glyphicon-download"></span>
+                            </a>
+                        </li>
+                        <li style="display: none;">
+                            <a id="img-load">
+                                <span class="glyphicon glyphicon-upload"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="img-clear">
+                                <i class="fas fa-eraser"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Undo + Redo -->
+                    <ul id="time-travel" class="nav navbar-nav">
+                        <li>
+                            <a id="btn-undo">
+                                <i class="fas fa-undo"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="btn-redo">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
-
-
-    <!-- Canvas -->
-    <div class="container-fluid">
-        <canvas id="canvas" width="1000" height="600">
+        <div class="leftpane">
+          
+            <img class="imageIcon" src="./assets/images/tha.png" width="100%" height="adjustments">
+       
+            <div class="sidebar">
+                <a class="active" href="#home">Home</a>
+                <a href="#Option2">Option2</a>
+                <a href="#Option3">Option3</a>
+                <a href="#Option4">Option4</a>
+              </div>
+        </div>
+          <div class="middlepane"> 
+              <canvas id="canvas" width="1000" height="600">
             Your browser does not support canvas :(
         </canvas>
     </div>
+          <!-- <div class="rightpane">
+            <h1>Test Page</h1></div> -->
+        </div>
+    <!-- Navigation bar -->
+
+
+   
+      
+    
+      
+
+    <!-- Canvas -->
+    <!-- <div class="container-fluid">
+        <canvas id="canvas" width="1000" height="600">
+            Your browser does not support canvas :(
+        </canvas>
+    </div> -->
 
 
     <!-- Hidden modal for size adjustments -->

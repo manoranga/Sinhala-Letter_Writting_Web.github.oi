@@ -1,6 +1,6 @@
 /* Make background slightly darker so canvas is visible as white */
 body {
-    background-color: darkgray;
+    background-color: darkblue;
 }
 
 /* Center the canvas */
@@ -8,20 +8,140 @@ body {
     background-color: white;
     padding: 0;
     margin: auto;
-    display: block;
-    position: absolute;
+    /* display: block;
+    position: absolute; */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    justify-content: center;
+    display: flex;
 }
 
 /* Center the navigation bar */
-#main-nav {
-    position: absolute;
+/* #main-nav {
+    position: fixed;
     left: 0;
-    height: 40px;
+    height: fit-content;
     width: 100%;
     display: flex;
+    background-color: white;
     justify-content: center;
+} */
+
+#main-nav {
+  background-color: white;
+  justify-content: center;
+  display: flex;
+}
+
+/* //newly added */
+
+
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color: darkblue;
+    border-collapse: collapse;
+}
+
+.middlepane {
+    width: 85%;
+    height: 100%;
+    float: left;
+    background-color: rgb(233, 223, 223);
+    border-collapse: collapse;
+}
+
+.rightpane {
+  width: 0%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: yellow;
+  border-collapse: collapse;
+}
+
+.toppane {
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+}
+
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.imageIcon {
+  width: 200px;
+  background-color: white;
+ 
 }
