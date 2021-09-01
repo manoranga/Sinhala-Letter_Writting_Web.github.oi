@@ -96,8 +96,8 @@
          */
         redo: function () {
             if (drawer.undoneShapes.length > 0) {
-                // drawer.shapes.push(drawer.undoneShapes.pop());
-                // drawer.redraw();
+                drawer.shapes.push(drawer.undoneShapes.pop());
+                drawer.redraw();
             }
         },
         /**
@@ -105,8 +105,8 @@
          */
         undo: function () {
             if (drawer.shapes.length > 0) {
-                // drawer.undoneShapes.push(drawer.shapes.pop());
-                // drawer.redraw();
+                drawer.undoneShapes.push(drawer.shapes.pop());
+                drawer.redraw();
             
             }
         }
@@ -568,10 +568,10 @@
          * @param evt The event that triggered this callback
          */
         function (evt) {
-            // drawer.selectedElement = null;
-            // drawer.shapes.splice(0, drawer.shapes.length);
-            // drawer.undoneShapes.splice(0, drawer.undoneShapes.length);
-            // drawer.redraw();
+            drawer.selectedElement = null;
+            drawer.shapes.splice(0, drawer.shapes.length);
+            drawer.undoneShapes.splice(0, drawer.undoneShapes.length);
+            drawer.redraw();
         }
     );
     // endregion
